@@ -1,4 +1,4 @@
-class Cart < Application Record
+class Cart < ApplicationRecord
   has_many :cart_items
   belongs_to :account
   before_save :update_total
@@ -24,6 +24,6 @@ class Cart < Application Record
   end
 
   def update_total
-    self.total_price = calculate_total 
+    self.total_price = calculate_total
   end
 end
